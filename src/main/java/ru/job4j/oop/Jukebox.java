@@ -4,19 +4,19 @@ public class Jukebox {
     public void music(int position){
         if (position == 1){
             System.out.println(
-                    "Пусть бегут неуклюже,\n" +
-                    "Пешеходы по лужам,\n" +
-                    "А вода по асфальту рекой.\n" +
-                    "И неясно прохожим,\n" +
-                    "В этот день непогожий,\n" +
+                    "Пусть бегут неуклюже," + System.lineSeparator() +
+                    "Пешеходы по лужам," + System.lineSeparator() +
+                    "А вода по асфальту рекой." + System.lineSeparator() +
+                    "И неясно прохожим," + System.lineSeparator() +
+                    "В этот день непогожий," + System.lineSeparator() +
                     "Почему я весёлый такой.");
         } else if (position == 2) {
             System.out.println(
-                    "Спят усталые игрушки, книжки спят.\n" +
-                    "Одеяла и подушки ждут ребят.\n" +
-                    "Даже сказка спать ложится,\n" +
-                    "Что бы ночью нам присниться.\n" +
-                    "Ты ей пожелай:\n" +
+                    "Спят усталые игрушки, книжки спят." + System.lineSeparator() +
+                    "Одеяла и подушки ждут ребят." + System.lineSeparator() +
+                    "Даже сказка спать ложится," + System.lineSeparator() +
+                    "Что бы ночью нам присниться." + System.lineSeparator() +
+                    "Ты ей пожелай:" + System.lineSeparator() +
                     "Баю-бай.");
         } else {
             System.out.println("Песня не найдена.");
@@ -25,7 +25,7 @@ public class Jukebox {
 
     public static void main(String[] args) {
         Jukebox song = new Jukebox();
-        int position = 2;
+        int position = 1;
         song.music(position);
     }
 }
