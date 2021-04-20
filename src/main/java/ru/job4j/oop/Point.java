@@ -22,4 +22,5 @@ public class Point {
         double rsl = ref.distance(fer);
         System.out.println(rsl);
     }
+
 }
