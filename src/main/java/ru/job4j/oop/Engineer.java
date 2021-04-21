@@ -1,8 +1,12 @@
 package ru.job4j.oop;
 
 public class Engineer extends Profession {
-        private String fieldOfActivity;
+    private String fieldOfActivity;
 
-        public void calculate(){
-        }
+    public Engineer(String name, String surname, String education, String birthday, String fieldOfActivity) {
+       super(name, surname,education, birthday);
+       this.fieldOfActivity = fieldOfActivity;
+    }
+    public void calculate(){
+    }
 }
