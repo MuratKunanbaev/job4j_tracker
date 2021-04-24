@@ -7,7 +7,5 @@ public class StartUI {
     public static void main(String[] args) {
         Item itemFirst = new Item(11,"Заявка1");
         System.out.println(itemFirst);
-
     }
-
 }
