@@ -28,7 +28,6 @@ public class StartUI {
                 System.out.println("Enter name: ");
                 String name = scanner.nextLine();
                 Item item = new Item(name);
-                tracker.replace(id, item);
                 if (tracker.replace(id, item)) {
                     System.out.println("Replacement completed successfully!");
                 } else {
