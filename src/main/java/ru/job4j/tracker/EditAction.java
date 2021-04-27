@@ -1,6 +1,12 @@
 package ru.job4j.tracker;
 
 public class EditAction implements UserAction{
+    private final Output out;
+
+    public EditAction(Output out) {
+        this.out = out;
+    }
+
     @Override
     public String name() {
         return "Replace Item";
@@ -17,6 +23,6 @@ public class EditAction implements UserAction{
         } else {
             System.out.println("Ошибка замены заявки.");
         }
-        return false;
+        return true;
     }
 }
