@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import static org.hamcrest.Matchers.nullValue;
 import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThat;
 
 public class StartUITest {
@@ -53,7 +54,7 @@ public class StartUITest {
                new ExitAction()
        };
       new StartUI(out).init(in, tracker, actions);
-        assertThat(tracker.findById(item.getId()), is(nullValue()));
+        assertNull(tracker.findById(item.getId()));
     }
 
     @Test
