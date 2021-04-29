@@ -18,14 +18,10 @@ public class UserStore {
     }
 
     public static boolean validate(User user) throws UserInvalidException{
-        boolean rsl = true;
         if (!user.isValid() || user.getUsername().length() < 3) {
-            rsl = false;
-        }
-        if (!rsl) {
             throw new UserInvalidException("User not valid or his name is less than 3 symbols");
         }
-        return rsl;
+        return true;
     }
 
     public static void main(String[] args)  {
@@ -35,7 +31,7 @@ public class UserStore {
                 new  User("Va", true)
         };
         try {
-            User user = findUser(users, "Va");
+            User user = findUser(users, "Petr Arsentev");
             validate(user);
 
         } catch (UserInvalidException ie) {
