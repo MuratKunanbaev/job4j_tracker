@@ -10,7 +10,7 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThat;
 
 public class StartUITest {
-    /*@Test
+    @Test
     public void whenCreateItem() {
         Output out = new StubOutput();
         Input in = new StubInput(
@@ -141,12 +141,11 @@ public class StartUITest {
                 "0. Find Item By Id" + ln +
                 "1. Exit Program" + ln +
                 "=== Find item by id =====" + ln +
-                "Item{id=1, name='Find by id'}" + ln
-                + "Menu: " + ln +
+                item + ln  + "Menu: " + ln +
                 "0. Find Item By Id" + ln +
                 "1. Exit Program" + ln
         ));
-    }*/
+    }
 
     @Test
     public void whenInvalidExit() {
