@@ -31,5 +31,4 @@ public class Citizen {
         Citizen citizen = (Citizen) o;
         return Objects.equals(passport, citizen.passport);
     }
-
 }
