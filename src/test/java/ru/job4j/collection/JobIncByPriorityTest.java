@@ -22,4 +22,5 @@ public class JobIncByPriorityTest {
         Collections.sort(jobs, new JobIncByPriority());
         assertThat(jobs.get(0).getPriority(), is(0));
     }
+
 }

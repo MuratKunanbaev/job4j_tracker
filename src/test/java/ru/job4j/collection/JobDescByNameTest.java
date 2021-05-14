@@ -21,4 +21,5 @@ public class JobDescByNameTest  {
         Collections.sort(jobs, new JobDescByName());
         assertThat(jobs.get(0).getName(), is("X task"));
     }
+
 }

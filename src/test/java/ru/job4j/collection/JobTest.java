@@ -48,4 +48,5 @@ public class JobTest {
         Collections.sort(jobs, new JobDescByName().thenComparing(new JobIncByPriority()));
         assertThat(jobs.get(0).getPriority(), is(3));
     }
+
 }
