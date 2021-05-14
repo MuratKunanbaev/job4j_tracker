@@ -35,10 +35,9 @@ public class BankService {
         User user = findByPassport(passport);
         if (user != null) {
             List<Account> userAccounts = users.get(user);
-            for(int index = 0; index < userAccounts.size(); index++) {
-                Account value = userAccounts.get(index);
-                if (value.getRequisite().equals(requisite)) {
-                    return value;
+            for (Account account : userAccounts) {
+                if (account.getRequisite().equals(requisite)) {
+                    return account;
                 }
             }
         }
