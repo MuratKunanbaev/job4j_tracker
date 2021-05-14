@@ -46,9 +46,11 @@ public class User implements Comparable<User> {
     }
 
     @Override
-    public int compareTo(User o) {
-        return Comparator.comparing(User :: getName).
-                thenComparing(User :: getAge).
-                compare(this, o);
+    public int compareTo(User other) {
+        int i = name.compareTo(other.name);
+        if (i != 0 ) {
+            return i;
+        }
+        return Integer.compare(age,other.age);
     }
 }
