@@ -19,5 +19,4 @@ public class JobIncByNameTest {
         Collections.sort(jobs, new JobIncByName());
         assertThat(jobs.get(0).getName(), is("Fix bug"));
     }
-
 }

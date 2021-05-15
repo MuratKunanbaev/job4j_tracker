@@ -9,7 +9,8 @@ public class College {
         LocalDate date = LocalDate.of(2009, 9, 1);
         student.setReceiptDate(date);
 
-        System.out.println(student.getFio() + " studying in a group number " + student.getGroupNumber() +
-                " entered the University " + student.getReceiptDate());
+        System.out.println(student.getFio() + " studying in a group number "
+                + student.getGroupNumber() + " entered the University "
+                + student.getReceiptDate());
     }
 }

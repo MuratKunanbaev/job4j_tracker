@@ -7,5 +7,4 @@ public class JobIncByPriority implements Comparator<Job> {
     public int compare(Job first, Job second) {
         return Integer.compare(first.getPriority(), second.getPriority());
     }
-
 }

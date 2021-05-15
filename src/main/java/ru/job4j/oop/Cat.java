@@ -11,6 +11,7 @@ public class Cat {
     public void eat(String meat) {
         this.food = meat;
     }
+
     public void show() {
         System.out.println(this.name);
         System.out.println(this.food);

@@ -11,7 +11,7 @@ public class FactTest {
     }
 
     @Test
-    public void when5Then120(){
+    public void when5Then120() {
         int rsl = Fact.calc(5);
        assertThat(rsl, is(120));
     }

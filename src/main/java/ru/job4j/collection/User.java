@@ -36,8 +36,8 @@ public class User implements Comparable<User> {
             return false;
         }
         User user = (User) o;
-        return age == user.age &&
-                Objects.equals(name, user.name);
+        return age == user.age
+                && Objects.equals(name, user.name);
     }
 
     @Override
@@ -48,10 +48,10 @@ public class User implements Comparable<User> {
     @Override
     public int compareTo(User other) {
         int i = name.compareTo(other.name);
-        if (i != 0 ) {
+        if (i != 0) {
             return i;
         }
-        return Integer.compare(age,other.age);
+        return Integer.compare(age, other.age);
     }
 
 }

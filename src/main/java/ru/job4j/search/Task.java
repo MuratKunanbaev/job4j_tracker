@@ -9,7 +9,6 @@ public class Task {
         this.priority = priority;
     }
 
-
     public String getDesc() {
         return desc;
     }
