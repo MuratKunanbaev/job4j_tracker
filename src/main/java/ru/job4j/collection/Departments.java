@@ -12,11 +12,7 @@ public class Departments {
                 start += el + "/";
             }
         }
-        List<String> rsl = new ArrayList<>();
-        for (String value : tmp) {
-            rsl.add(value);
-        }
-        return rsl;
+        return new ArrayList<>(tmp);
     }
 
     public static void sortAsc(List<String> orgs) {
