@@ -15,7 +15,6 @@ public class Profile {
         this.address = address;
     }
 
-
     public String getName() {
         return name;
     }
@@ -34,10 +33,15 @@ public class Profile {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         Profile profile = (Profile) o;
-        return age == profile.age && name.equals(profile.name) && surname.equals(profile.surname) && address.equals(profile.address);
+        return age == profile.age && name.equals(profile.name)
+                && surname.equals(profile.surname) && address.equals(profile.address);
     }
 
     @Override
@@ -47,11 +51,12 @@ public class Profile {
 
     @Override
     public String toString() {
-        return "Profile{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", age=" + age +
-                ", address=" + address +
-                '}';
+        return "Profile{"
+                + "name='"
+                + name + '\''
+                + ", surname='" + surname + '\''
+                + ", age=" + age
+                + ", address=" + address
+                + '}';
     }
 }

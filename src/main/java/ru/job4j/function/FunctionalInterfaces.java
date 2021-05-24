@@ -19,7 +19,7 @@ public class FunctionalInterfaces {
              i % 2 == 0 || s.length() == 4;
 
         for (Integer j : map.keySet()) {
-            if (biPred.test(j,map.get(j))) {
+            if (biPred.test(j, map.get(j))) {
                 System.out.println("key: " + j + " value: " + map.get(j));
             }
         }

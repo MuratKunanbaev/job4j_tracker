@@ -6,7 +6,6 @@ public class Folder {
     private String name;
     private int size;
 
-
     public Folder(String name, int size) {
         this.name = name;
         this.size = size;
@@ -39,9 +38,11 @@ public class Folder {
 
     @Override
     public String toString() {
-        return "Folder{" +
-                "name='" + name + '\'' +
-                ", size=" + size +
-                '}';
+        return "Folder{"
+                + "name='"
+                + name + '\''
+                + ", size="
+                + size
+                + '}';
     }
 }

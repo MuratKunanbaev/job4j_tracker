@@ -64,6 +64,7 @@ public class SchoolTest {
         expected.add(new Student(40, "Surname4"));
         assertThat(rsl, is(expected));
     }
+
     @Test
     public void when2DuplicateConvertToMap() {
         List<Student> students = List.of(
