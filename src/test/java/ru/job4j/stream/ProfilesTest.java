@@ -59,8 +59,7 @@ public class ProfilesTest {
                         new Address("Moscow", "Lenina", 34, 2))
         );
         Profiles prof = new Profiles();
-        List<Address> rsl = prof.collect(profiles);
-        rsl = prof.sorted(rsl, prof.comparatorCity);
+        List<Address> rsl = prof.sorted(profiles);
         List<Address> expected = new ArrayList<>();
         expected.add(new Address("Moscow", "Lenina", 34, 2));
         expected.add(new Address("Samara", "Gagarina", 16, 3));
