@@ -10,4 +10,5 @@ public class MatrixNumber {
                 .flatMap(Arrays::stream)
                 .collect(Collectors.toList());
     }
+
 }
