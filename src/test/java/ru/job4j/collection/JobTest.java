@@ -25,7 +25,7 @@ import static org.junit.Assert.assertThat;
 
     @Test
     public void whenComparatorByIncNameAndIncPriority() {
-        List<Job> jobs = Arrays.asList(
+        List<Job> jobs = List.of(
                 new Job("Impl task", 0),
                 new Job("Fix bug", 1),
                 new Job("X task", 3),
@@ -37,7 +37,7 @@ import static org.junit.Assert.assertThat;
 
     @Test
     public void whenComparatorByDescNameAndIncPriority() {
-        List<Job> jobs = Arrays.asList(
+        List<Job> jobs = List.of(
                 new Job("Impl task", 0),
                 new Job("Fix bug", 1),
                 new Job("X task", 5),

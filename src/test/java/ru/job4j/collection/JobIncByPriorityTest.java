@@ -13,7 +13,7 @@ import static org.junit.Assert.assertThat;
 public class JobIncByPriorityTest {
     @Test
     public void whenComparatorByPriorityIncrement() {
-        List<Job> jobs = Arrays.asList(
+        List<Job> jobs = List.of(
                 new Job("Impl task", 0),
                 new Job("Fix bug", 1),
                 new Job("X task", 3),
