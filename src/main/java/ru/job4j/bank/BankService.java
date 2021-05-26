@@ -13,7 +13,7 @@ public class BankService {
      *Хранение пользователей системы с привязанными к ним счетам
      * осуществляется в коллекции типа HashMap.
      */
-    private Map<User, List<Account>> users = new HashMap<>();
+    private final Map<User, List<Account>> users = new HashMap<>();
 
     /**
      * Метод принимает на вход пользователя и добавляет его в систему,
@@ -68,7 +68,7 @@ public class BankService {
        Optional<Account> rsl = Optional.empty();
        Optional<User> user = findByPassport(passport);
         if (user.isPresent()) {
-             rsl= users.get(user.get())
+             rsl = users.get(user.get())
                     .stream()
                     .filter(s -> s.getRequisite().equals(requisite))
                     .findFirst();
