@@ -15,8 +15,8 @@ public class Analize {
     }
 
     public static class User {
-        int id;
-        String name;
+        final private int id;
+        final private String name;
 
         public User(int id, String name) {
             this.id = id;
@@ -33,11 +33,13 @@ public class Analize {
 
         @Override
         public boolean equals(Object o) {
-            if (this == o) return true;
-            if (!(o instanceof User)) return false;
-
+            if (this == o) {
+                return true;
+            }
+            if (!(o instanceof User)) {
+                return false;
+            }
             User user = (User) o;
-
             return getId() == user.getId();
         }
 
@@ -48,9 +50,21 @@ public class Analize {
     }
 
     public static class Info {
-        int added;
-        int changed;
-        int deleted;
+        private int added;
+        private int changed;
+        private int deleted;
+
+        public int getAdded() {
+            return added;
+        }
+
+        public int getChanged() {
+            return changed;
+        }
+
+        public int getDeleted() {
+            return deleted;
+        }
     }
 
     public static void main(String[] args) {
@@ -65,8 +79,7 @@ public class Analize {
         );
         Analize analize = new Analize();
         Info rsl = analize.diff(previous, current);
-        System.out.println(rsl.added + " " +  rsl.changed + " " + rsl.deleted);
-
-
+        System.out.println(rsl.added + " " +  rsl.changed
+                + " " + rsl.deleted);
     }
 }

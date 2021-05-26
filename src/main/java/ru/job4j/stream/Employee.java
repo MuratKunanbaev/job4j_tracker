@@ -46,7 +46,7 @@ public class Employee {
             return this;
         }
 
-        Builder buildAge (byte age) {
+        Builder buildAge(byte age) {
             this.age = age;
             return this;
         }

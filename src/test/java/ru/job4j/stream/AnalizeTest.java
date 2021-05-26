@@ -23,7 +23,7 @@ public class AnalizeTest  {
         );
         Analize analize = new Analize();
         Analize.Info rsl = analize.diff(previous, current);
-        assertThat(rsl.added, is( 0));
+        assertThat(rsl.getAdded(), is(0));
     }
 
     @Test
@@ -40,7 +40,7 @@ public class AnalizeTest  {
         );
         Analize analize = new Analize();
         Analize.Info rsl = analize.diff(previous, current);
-        assertThat(rsl.deleted, is( 0));
+        assertThat(rsl.getDeleted(), is(0));
     }
 
     @Test
@@ -57,6 +57,6 @@ public class AnalizeTest  {
         );
         Analize analize = new Analize();
         Analize.Info rsl = analize.diff(previous, current);
-        assertThat(rsl.changed, is( 0));
+        assertThat(rsl.getChanged(), is(0));
     }
 }
