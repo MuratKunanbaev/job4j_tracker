@@ -48,7 +48,6 @@ public class BankService {
      * @return возвращает наиденного пользователя или null, если такой пользователь не найден.
      */
     public Optional<User> findByPassport(String passport) {
-        Optional<User> rsl = Optional.empty();
          return users.keySet()
                 .stream()
                 .filter(u -> u.getPassport().equals(passport))
@@ -65,15 +64,11 @@ public class BankService {
      * @return возвращает найденный счет пользователя или null если он отсутствует.
      */
    public Optional<Account> findByRequisite(String passport, String requisite) {
-       Optional<Account> rsl = Optional.empty();
        Optional<User> user = findByPassport(passport);
-        if (user.isPresent()) {
-             rsl = users.get(user.get())
+             return user.flatMap(value -> users.get(value)
                     .stream()
                     .filter(s -> s.getRequisite().equals(requisite))
-                    .findFirst();
-        }
-        return rsl;
+                    .findFirst());
     }
 
     /**
@@ -93,7 +88,7 @@ public class BankService {
         boolean rsl = false;
         Optional<Account> userSrcAccount = findByRequisite(srcPassport, srcRequisite);
         Optional<Account> userDestAccount = findByRequisite(destPassport, destRequisite);
-        if (userSrcAccount != null && userDestAccount != null
+        if (userSrcAccount.isPresent() && userDestAccount.isPresent()
                 && userSrcAccount.get().getBalance() >= amount) {
             userSrcAccount.get().setBalance(userSrcAccount.get().getBalance() - amount);
             userDestAccount.get().setBalance(userDestAccount.get().getBalance() + amount);
