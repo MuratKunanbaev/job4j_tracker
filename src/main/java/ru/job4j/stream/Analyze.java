@@ -33,7 +33,7 @@ public class Analyze {
                                     Collectors.averagingDouble(Subject::getScore)))
                 .entrySet()
                 .stream()
-                .map(t-> new Tuple(t.getKey(), t.getValue()))
+                .map(t -> new Tuple(t.getKey(), t.getValue()))
                 .collect(Collectors.toList());
     }
 
@@ -54,7 +54,7 @@ public class Analyze {
                         Collectors.summingDouble(Subject::getScore)))
                 .entrySet()
                 .stream()
-                .map(t-> new Tuple(t.getKey(), t.getValue()))
+                .map(t -> new Tuple(t.getKey(), t.getValue()))
                 .max(Comparator.comparing(Tuple::getScore))
                 .orElse(new Tuple("Empty", 0D));
     }
